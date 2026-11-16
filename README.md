@@ -1,7 +1,5 @@
 # Flashcards (Vue 3)
 
-[![CI](https://github.com/alexg0dev/vue-flashcards/actions/workflows/ci.yml/badge.svg)](https://github.com/alexg0dev/vue-flashcards/actions/workflows/ci.yml)
-
 A small flashcard app built with Vue 3 and Vite. You make decks, flip through the cards, and mark each one "Got it" or "Not yet". Cards you know come back less often, and cards you miss come back straight away.
 
 **Live demo:** https://alexg0dev.github.io/vue-flashcards/
@@ -35,7 +33,7 @@ A study session shows the due cards, lowest box first. A card you mark "Not yet"
 - Vite
 - SASS (variables, mixins and BEM-style class names)
 - Vitest, Vue Test Utils and jsdom for tests
-- GitHub Actions for CI and for deploying to GitHub Pages
+- GitHub Pages for hosting (the built `dist` folder is published to the `gh-pages` branch)
 
 ## Project structure
 
@@ -73,13 +71,19 @@ npm run build
 npm run preview
 ```
 
+To publish the build to GitHub Pages:
+
+```bash
+npm run deploy
+```
+
 ## Tests
 
 ```bash
 npm test
 ```
 
-This runs unit tests for the scheduling logic and component tests for the study session (flipping, answering, re-queuing and keyboard shortcuts). The same tests and the build run on every push in GitHub Actions.
+This runs unit tests for the scheduling logic and component tests for the study session (flipping, answering, re-queuing and keyboard shortcuts).
 
 ## Licence
 
